@@ -44,10 +44,12 @@ class Scraper:
 
         # Send the properties to slack
         if len(self.results) > 0: 
+            use_second_color = False
             for r in self.results:
                 if self.property_exists_in_db(r) is False:
-                    self.result_to_slack_message(r)
-                    #self.save_result_to_sdb(r)
+                    self.result_to_slack_message(r, use_second_color)
+                    self.save_result_to_sdb(r)
+                    use_second_color = not use_second_color
 
     def process_search_result(self, result_url):
         result = None
@@ -106,7 +108,10 @@ class Scraper:
         result = Result(results_dict)
         return result
 
-    def result_to_slack_message(self, result):
+    def result_to_slack_message(self, result, use_second_color=False):
+        colors = ["#36A64F", "#3AA3E3"]
+        color = colors[1] if use_second_color else colors[0]
+
         # Generate the fields for the slack message
         fields = []
         fields.append(slack.Field("Price", result.price)) if result.price is not None else None
@@ -119,10 +124,10 @@ class Scraper:
         fields.append(slack.Field("Average Unit Size (Sq Ft)", result.avg_unit_size)) if result.avg_unit_size is not None else None
 
         attachments = []
-        attachments.append(slack.Attachment('<%s|%s>' % (result.property_url, result.address), "#3AA3E3", fields=fields, image_url=result.image_url))
+        attachments.append(slack.Attachment('<%s|%s>' % (result.property_url, result.address), color, fields=fields, image_url=result.image_url))
 
         message = slack.Message("LoopNet Scraper", "", emoji=":moneybag:", attachments=attachments)
-        message.send('https://hooks.slack.com/services/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', username='ScraperBot', channel="test")
+        message.send('https://hooks.slack.com/services/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', username='ScraperBot', channel="property-listings")
 
     def save_result_to_sdb(self, result):
         attributes = []
