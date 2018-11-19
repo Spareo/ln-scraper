@@ -1,0 +1,104 @@
+---
+SimpleDB:
+  Domain: multifamily-properties
+LoopNet:
+  pageguid: e6ed0477-2ae9-4197-ad37-a8df4c799cbb
+  criteria:
+    LNPropertyTypes: 8
+    PropertyTypes: 0
+    HospitalitySubtypes: 0
+    IndustrialSubtypes: 0
+    LandTypes: 0
+    OfficeSubtypes: 0
+    GeneralRetailSubtypes: 0
+    FlexSubtypes: 0
+    SportsAndEntertainmentSubtypes: 0
+    SpecialtySubtypes: 0
+    MultifamilySubtypes: 0
+    HealthcareSubtypes: 0
+    ShoppingCenterTypes: 0
+    ApartmentStyleTypes: 0
+    Country: US
+    State: TX
+    Market: ''
+    MSA: 
+    County: ''
+    City: ''
+    PostalCode: ''
+    GeographyFilters:
+    - GeographyId: '44'
+      Code: TX
+      Display: Texas
+      GeographyType: 1
+      BoundingBox:
+      - -106.645783
+      - 25.83802
+      - -93.5087429
+      - 36.503441
+      Centroid:
+      - -100.077263
+      - 31.17073
+    PageLocationLabel: Tx
+    IncludeProximityCities: false
+    Distance: ''
+    Radius: 
+    CoordinateBounds: 
+    Polygon: 
+    HasValidCoordinates: 
+    BuildingClass: 0
+    BuildingSizeUom: SquareFeet
+    LotSizeUom: Acres
+    SubCategoryList: []
+    Editor: ProfileBackLink
+    PreserveAddressForRadiusSavedSearch: false
+    ListingSearchType: 1
+    OnMarketDateRange: 
+    Keywords: 
+    IsForSale: true
+    PriceRangeMin: 
+    PriceRangeMax: '1,000,000'
+    BuildingSizeRangeMin: 
+    BuildingSizeRangeMax: 
+    PriceRangeRateType: Total
+    LotSizeRangeMin: 
+    LotSizeRangeMax: 
+    UnitCountRangeMin: '10'
+    UnitCountRangeMax: 
+    CapRateRangeMin: 
+    CapRateRangeMax: 
+    YearBuiltRangeMin: 
+    YearBuiltRangeMax: 
+    NetLeased: false
+    InContract: false
+    Distressed: false
+    Auction: false
+    Single: false
+    Multiple: false
+    BusinessForSale: true
+    VacantOwner: true
+    Investment: true
+    CondosFilter: 0
+    PortfoliosFilter: 0
+    ShoppingCenterFilter: 0
+    IsForLease: false
+    LeaseRateRangeMin: 
+    LeaseRateRangeMax: 
+    SpaceAvailableRangeMin: 
+    SpaceAvailableRangeMax: 
+    LeaseRateTerm: 
+    SpaceAvailableUom: SquareFeet
+    LeaseRatePerSizeUom: SquareFeet
+    SubLease: false
+    RegionalMarket: 
+    SubMarket: ''
+    ListingId: 
+    DateIndicator: 0
+    DateEnteredRangeMin: ''
+    DateEnteredRangeMax: ''
+    ViewMode: None
+    ResultLimit: 500
+    PageNumber: 1
+    PageSize: 20
+    Timeout: 0
+    Origin: 1
+    StateKey: f2b595b051f7feafd2d11af39bb935e5

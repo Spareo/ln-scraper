@@ -15,7 +15,7 @@
             "name": "Python: Current File (Debug Terminal)",
             "type": "python",
             "request": "launch",
-            "program": "${",
+            "program": "${file}",
             "console":"none"
         },
         {

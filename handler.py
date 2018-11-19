@@ -1,27 +1,14 @@
 import json
-from ln_scraper.settings import *
-from ln_scraper.scraper import *
+try:
+    import main
+except:
+    import ln_scraper.main as main
+
 
 def run(event, context):
-    # Read the settings
-    sp = SettingsParser()
-    settings = sp.get_settings('./ln-scraper/settings.yaml')
-
-    # Scrape the data 
-    scraper = Scraper(settings)
-    scraper.run_scrape_job()
-
+    main.run()
     return
 
 
-    # body = {
-    #     "message": "Go Serverless v1.0! Your function executed successfully!",
-    #     "input": event
-    # }
-
-    # response = {
-    #     "statusCode": 200,
-    #     "body": json.dumps(body)
-    # }
-
-    # return response
+if __name__ == "__main__":
+    run('','')

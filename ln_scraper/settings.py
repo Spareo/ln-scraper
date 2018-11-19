@@ -8,9 +8,10 @@ class SettingsParser:
         with open(settings_file, 'r') as stream:
             try:
                 data = yaml.safe_load(stream)
-                settings = {}
-                settings['criteria'] = data['criteria']
-                settings['pageguid'] = data['pageguid']
-                return settings
+                # data = data['LoopNet']
+                # settings = {}
+                # settings['criteria'] = data['criteria']
+                # settings['pageguid'] = data['pageguid']
+                return data
             except yaml.YAMLError as exc:
                 print(exc)
